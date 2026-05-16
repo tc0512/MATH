@@ -1,6 +1,6 @@
 name: Run Code
 on:
-  workflow_dispath:
+  workflow_dispatch:
 
 jobs:
   run-code:
@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: Setup environment
         run: |
+          apt update -y
+          apt upgrade -y
           apt install python3 python3-pip python3-venv python-is-python3 git -y
           python -m venv runner
           source ~/runner/bin/activate
@@ -18,4 +20,5 @@ jobs:
       - name: Run code
         run: |
           cd MATH
+          chmod +x run_all.sh
           ./run_all.sh

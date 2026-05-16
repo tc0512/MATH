@@ -1,0 +1,19 @@
+name: Run Code
+on: workflow_dispath
+jobs:
+  run-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup environment
+        run: |
+          apt install python3 python3-pip python3-venv python-is-python3 git -y
+          python -m venv runner
+          source ~/runner/bin/activate
+      - name: Install sympy
+        run: pip install sympy -y
+      - name: Clone repository
+        run: git clone https://github.com/tc0512/MATH.git
+      - name: Run code
+        run: |
+          cd MATH
+          ./run_all.sh

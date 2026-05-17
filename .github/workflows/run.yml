@@ -21,4 +21,4 @@ jobs:
         run: |
           cd MATH
           chmod +x run_all.sh
-          ./run_all.sh
+          time ./run_all.sh

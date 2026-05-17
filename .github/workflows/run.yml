@@ -14,7 +14,7 @@ jobs:
           python -m venv runner
           source runner/bin/activate
       - name: Install sympy
-        run: pip install sympy -y
+        run: pip install sympy
       - name: Clone repository
         run: git clone https://github.com/tc0512/MATH.git
       - name: Run code

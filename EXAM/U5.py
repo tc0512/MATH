@@ -54,3 +54,18 @@ for i in range(4):
     if value==values[i]:
         print(f"8、{choice[i]}")
         break
+x = 3
+a = Symbol("a")
+ex = 2/(x-a)-3/x
+print(f"9、{solve(ex, a)[0]}")
+def det2(a, b, c, d):return a*d-b*c
+x = Symbol("x")
+ex = det2(2, 1, 1/(1-x), 1/(x-1))-1
+print(f"11、{solve(ex, x)[0]}")
+m = Symbol("m")
+ex = (2*x+m)/(x-3)-3
+sol_x = solve(ex, x)
+domain1 = str(solve(sol_x[0]>0, m))
+domain2 = solve(sol_x[0]-3, m)
+res = domain1[:14]+"!="+" "+str(domain2[0])+")"
+print(f"12、{res}")

@@ -20,5 +20,4 @@ jobs:
       - name: Run code
         run: |
           cd MATH
-          chmod +x run_all.sh
-          time ./run_all.sh
+          time python EXAM/U5.py

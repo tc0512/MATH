@@ -1,4 +1,6 @@
 #!/bin/bash
+echo "教材P6随堂练习"
+python BOOK/P6.py
 echo "周测（5.3）"
 python EXAM/week53.py
 echo "单元测试（五） 分式与分式方程"

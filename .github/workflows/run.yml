@@ -20,4 +20,4 @@ jobs:
       - name: Run code
         run: |
           cd MATH
-          time python EXAM/U5.py
+          time python EXAM/week61-62.py

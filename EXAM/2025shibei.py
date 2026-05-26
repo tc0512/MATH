@@ -49,3 +49,12 @@ for i in range(4):
     if val_m==val[i]:
         print(f"7、{choice[i]}")
         break
+print(f"10、{factor(4*x-8*x*y)}")
+n = Symbol("n")
+sol_n = solve(180*(n-2)-720, n)
+val_n = sol_n[0]
+print(f"11、{val_n}")
+ang1 = ang2 = ang3 = ang4 = 75
+ang5 = 360-ang1-ang2-ang3-ang4
+AED = 180-ang5
+print(f"14、{AED}")

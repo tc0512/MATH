@@ -1,3 +1,8 @@
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+from matplotlib.font_manager import FontProperties
+
 from sympy import*
 x, y = symbols("x y")
 ex1 = x/(x+y)
@@ -58,3 +63,14 @@ ang1 = ang2 = ang3 = ang4 = 75
 ang5 = 360-ang1-ang2-ang3-ang4
 AED = 180-ang5
 print(f"14、{AED}")
+
+print("图片生成中...", end="")
+chinese_font = FontProperties(fname='/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc')
+x = [0, 4, 1, 0]
+y = [0, 0, 4, 0]
+plt.plot(x, y, 'k-', linewidth=2)
+plt.axis('equal')
+plt.title("第16题", fontproperties=chinese_font)
+plt.savefig("T16.png")
+plt.close()
+print("完成")

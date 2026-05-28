@@ -2,6 +2,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.font_manager import FontProperties
+from matplotlib.patches import Circle
 
 from sympy import*
 x, y = symbols("x y")
@@ -64,11 +65,13 @@ ang5 = 360-ang1-ang2-ang3-ang4
 AED = 180-ang5
 print(f"14、{AED}")
 
-print("图片生成中...", end="")
+print("第16题图片生成中...", end="")
 chinese_font = FontProperties(fname='/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc')
 x = [0, 4, 1, 0]
 y = [0, 0, 4, 0]
 plt.plot(x, y, 'k-', linewidth=2)
+circle = Circle((1, 4), np.sqrt(17), fill=False, edgecolor='blue', linestyle="-", linewidth=2)
+plt.gca.add_patch(circle)
 plt.axis('equal')
 plt.title("第16题", fontproperties=chinese_font)
 plt.savefig("T16.png")

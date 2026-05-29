@@ -4,7 +4,9 @@ import matplotlib.pyplot as plt
 from matplotlib.font_manager import FontProperties
 from matplotlib.patches import Circle
 
-from sympy import*
+
+import numpy as np
+from sympy import Symbol, symbols, solve, factor, simplify, Rational, Eq
 x, y = symbols("x y")
 ex1 = x/(x+y)
 x_new = 2*x
@@ -70,9 +72,15 @@ chinese_font = FontProperties(fname='/usr/share/fonts/opentype/noto/NotoSansCJK-
 x = [0, 4, 1, 0]
 y = [0, 0, 4, 0]
 plt.plot(x, y, 'k-', linewidth=2)
-circle = Circle((1, 4), np.sqrt(17), fill=False, edgecolor='blue', linestyle="-", linewidth=2)
-plt.gca.add_patch(circle)
-plt.axis('equal')
+circle1 = Circle((1, 4), np.sqrt(17), fill=False, edgecolor='blue', linestyle="-", linewidth=2)
+circle2 = Circle((0, 0), 2, fill=False, edgecolor='blue', linestyle="-", linewidth=2)
+circle3 = Circle((2, 0), 2, fill=False, edgecolor='blue', linestyle="-", linewidth=2)
+plt.gca().add_patch(circle1)
+plt.gca().add_patch(circle2)
+plt.gca().add_patch(circle3)
+plt.xlim(-1, 5)
+plt.ylim(-2, 5)
+plt.gca().set_aspect('equal', adjustable='box')
 plt.title("第16题", fontproperties=chinese_font)
 plt.savefig("T16.png")
 plt.close()

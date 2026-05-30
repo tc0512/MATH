@@ -68,7 +68,7 @@ AED = 180-ang5
 print(f"14、{AED}")
 
 print("16、图片生成中...", end="")
-chinese_font = FontProperties(fname='/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc')
+chinese_font = FontProperties(fname='../fonts/NotoSansCJK-Regular.ttc')
 x = [0, 4, 1, 0]
 y = [0, 0, 4, 0]
 plt.plot(x, y, 'k-', linewidth=2)

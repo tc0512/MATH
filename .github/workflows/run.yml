@@ -13,19 +13,23 @@ jobs:
           sudo apt install python3 python3-pip python3-venv python-is-python3 git -y
           python -m venv runner
           source runner/bin/activate
+
       - name: Install dependencies
         run: pip install sympy matplotlib
+
       - name: Clone repository
         run: git clone https://github.com/tc0512/MATH.git
+
       - name: Run code
         run: |
           cd MATH
           time python EXAM/2025shibei.py
           ls
           ls image/
+
       - name: Upload pictures
         uses: actions/upload-artifact@v4
         with:
           name: matplotlib-pictures
-          path: *.png
+          path: '**/*.png'
           retention-days: 30

@@ -21,13 +21,8 @@ else
     pkg install -y git 2>/dev/null 1>/dev/null
 fi
 echo -e "\033[32m[2/3] Install runtime dependencies\033[0m"
-if pkg list-installed | grep -q "^matplotlib "; then
-    echo "matplotlib is already installed"
-else
-    echo "matplotlib is not installed,so install it"
-    pkg update -y &>/dev/null
-    pkg install -y matplotlib
-fi
+pkg update -y
+pkg install -y matplotlib
 if pip show sympy &>/dev/null; then
     echo "sympy is already installed"
 else
@@ -36,4 +31,4 @@ else
 fi
 echo -e "\033[32m[3/3] Clone repository\033[0m"
 rm -rf MATH
-git clone https://github.con/tc0512/MATH
+git clone https://github.com/tc0512/MATH

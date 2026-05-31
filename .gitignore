@@ -1,0 +1,10 @@
+#Pictures by matplotlib
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tif
+*.tiff
+*.webp
+*.heic
+*.avif

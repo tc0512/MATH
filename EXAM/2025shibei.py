@@ -7,6 +7,7 @@ from matplotlib.patches import Circle
 
 import numpy as np
 from sympy import Symbol, symbols, solve, factor, simplify, Rational, sqrt, expand, solveset
+import os
 x, y = symbols("x y")
 ex1 = x/(x+y)
 x_new = 2*x
@@ -98,6 +99,7 @@ plt.title("第16题", fontproperties=chinese_font)
 plt.savefig("T16.png")
 plt.close()
 print("完成")
+os.system("mv T16.png image/")
 
 print("17、")
 a, b, x = symbols("a b x")
@@ -132,6 +134,7 @@ plt.title("第18题", fontproperties=chinese_font)
 plt.savefig("T18.png")
 plt.close()
 print("完成")
+os.system("mv T18.png image/")
 
 a = sqrt(5)-1
 ex = (2+(1-a)/a)/((a**2+2*a+1)/a)
@@ -179,6 +182,7 @@ plt.title("第22题第(4)问", fontproperties=chinese_font)
 plt.savefig("T22-4.png")
 plt.close()
 print("完成")
+os.system("mv T22-4.png image/")
 
 print("24、")
 x = Symbol("x")

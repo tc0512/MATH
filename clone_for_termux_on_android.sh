@@ -25,8 +25,8 @@ if pkg list-installed | grep -q "^matplotlib "; then
     echo "matplotlib is already installed"
 else
     echo "matplotlib is not installed,so install it"
-    pkg update -y &/dev/null
-    pkg install -y matplotlib 2>/dev/null 1>/dev/null
+    pkg update -y &>/dev/null
+    pkg install -y matplotlib
 fi
 if pip show sympy &>/dev/null; then
     echo "sympy is already installed"

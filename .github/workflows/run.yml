@@ -21,6 +21,8 @@ jobs:
         run: |
           cd MATH
           time python EXAM/2025shibei.py
+          ls
+          ls image/
       - name: Upload pictures
         uses: actions/upload-artifact@v4
         with:

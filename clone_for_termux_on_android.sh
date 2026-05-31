@@ -32,3 +32,4 @@ fi
 echo -e "\033[32m[3/3] Clone repository\033[0m"
 rm -rf MATH
 git clone https://github.com/tc0512/MATH
+rm MATH/clone_for_termux_on_android.sh

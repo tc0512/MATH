@@ -1,10 +1,15 @@
 #Pictures by matplotlib
+*.eps
 *.jpg
 *.jpeg
-*.gif
-*.bmp
+*.pdf
+*.pgf
+*.png
+*.ps
+*.raw
+*.rgba
+*.svg
+*.svgz
 *.tif
 *.tiff
 *.webp
-*.heic
-*.avif

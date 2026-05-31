@@ -25,5 +25,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: matplotlib-pictures
-          path: EXAM/*.png
+          path: *.png
           retention-days: 30
